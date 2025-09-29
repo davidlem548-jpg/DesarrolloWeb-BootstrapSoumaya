@@ -1,0 +1,76 @@
+:root{ --hero-img: url("https://www.museo-soumaya.org/wp-content/uploads/2025/06/soumaya5.jpg"); } 
+body{ font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;padding-top: 0;}
+.hero{
+    min-height: 10vh;
+    max-height: 85vh;
+    background: var(--hero-img) center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+}
+.container { position: relative; z-index: 1; }
+.hero-overlay{
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 0;
+  pointer-events: none;  
+}
+.navbar { position:relative; z-index: 2; }/* navbar por encima del overlay */
+.navbar.bg-transparent{
+  background: rgba(255, 255, 255, 0) !important;
+  box-shadow: none;
+}
+.btn-primary{ background:#1a73e8; border-color:#1a73e8; }
+.btn-primary:hover{ filter:brightness(.95); }
+
+@media only screen and (max-width: 976px) {
+    .uagb-block-b48fe4eb.wp-block-uagb-image .wp-block-uagb-image__figure img {
+        object-fit: cover;
+        width: 368px;
+        height: 300px;
+    }
+}
+.bg-soft-primary { background: #eaf3ff; }
+.object-fit-cover { object-fit: cover; }
+
+.testimonial{
+  position: relative;
+  min-height: 60vh;                   
+  display: flex;
+  align-items: center;         
+  justify-content: center;
+  background: url("https://www.museo-soumaya.org/wp-content/uploads/2025/06/the-museo-soumaya-in-mexico-city-6068017.jpeg") center/cover no-repeat;
+  overflow: hidden;
+  z-index: 1;
+}
+.testimonial__overlay{
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);  
+  pointer-events: none;
+}
+.testimonial blockquote{
+  max-width: 1000px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991.98px){
+  .testimonial{ min-height: 50vh; }
+  .testimonial blockquote{ font-size: 1.75rem; } 
+}
+
+.cta{
+  position: relative;
+  background: url("https://www.museo-soumaya.org/wp-content/uploads/2025/06/stylish-models-at-soumaya-museum-mexico-city-30115093.jpeg") center/cover no-repeat;
+  overflow: hidden;
+}
+.cta__overlay{
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);         
+  pointer-events: none;
+}
+.min-vh-60{ min-height: 60vh; }      
+.offer-img{
+  width: 100%;
+  height: 100%;
+  display: block; 
+  object-fit: cover;
+}
